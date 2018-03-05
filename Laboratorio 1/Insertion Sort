@@ -1,0 +1,32 @@
+def sort_numbers(a):
+    for i in range(1, len(a)):
+        value = a[i]
+        j = i - 1
+        while (j >= 0) and (a[j] > value):
+            a[j+1] = a[j]
+            j = j - 1
+        a[j+1] = value
+
+def ascendente(a):
+    b = True
+    for i in range(1, len(a)-1):
+        if a[i] > a[i+1]:
+            return False
+    return b
+
+
+
+def main():
+    a = eval(input("Digite los numeros a ser ordenados: "))
+    a = list(a)
+    b = ascendente(a)
+    print(b)
+    sort_numbers(a)
+    print(a)
+    b = ascendente(a)
+    if b:
+        print(b)
+
+main()
+
+# ejemplo: [2, 3, 4, 5, 1]
