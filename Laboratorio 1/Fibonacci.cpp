@@ -2,14 +2,13 @@
 
 using namespace std;
 
-int main()
-{
-    int n;
-    int fib1=0;
-    int fib2=1;
-    cout<<"Ingrese el n: "<<endl;
-    cin>>n;
-    if(n<=1){
+unsigned long long int fibo (int n) {
+	unsigned long long int fib1;
+	unsigned long long int fib2;
+	fib1=0;
+	fib2=1;
+
+	if(n<=1){
         cout<<n<<endl;
     }else{
         for(int i=2; i <=n; i++){
@@ -18,8 +17,13 @@ int main()
             fib1=fib2-fib1;
         }
     }
-    
-
+}
+int main()
+{
+    unsigned long long int resul;
+    int fib;
+    cout<<"Ingrese el n: "<<endl;
+    cin>>fib;
+    resul = fibo(fib);
     return 0;
 }
-
