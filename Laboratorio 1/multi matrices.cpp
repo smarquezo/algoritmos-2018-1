@@ -1,7 +1,9 @@
 #include <iostream>
+#include <time.h>
 using namespace std;
 
 int main(){
+    clock_t t;
     int n;
     cout<<"Ingrese el tamano de la matriz n: "<<endl;
     cin>>n;
@@ -21,7 +23,7 @@ int main(){
             cin >> b[i][j];
         }
     }
-   
+  t = clock(); 
   for(i=0;i<n;i++){ 
       for(j=0;j<n;j++){
           c[i][j]=0;
@@ -30,14 +32,18 @@ int main(){
           }
       }
   }
+  t = clock() - t;
+  float ttotal = t;
   cout << endl << "Matriz C (Matriz A*B)." << endl;
   cout << endl;
   for(i=0;i<n;i++){ 
       for(j=0;j<n;j++){
           cout << c[i][j] << " ";
           if(j==2)
-          cout << endl;
+          cout << endl << endl;
       }
   }
+  
+  cout<< ("Tiempo de ejecucion: " ,((float)t)/CLOCKS_PER_SEC);
   return 0;
 }
