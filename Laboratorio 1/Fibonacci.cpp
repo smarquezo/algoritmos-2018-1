@@ -18,6 +18,10 @@ unsigned long long int fibo (int n) {
         }
     }
 }
+/*int n=2;
+int fib1=0;
+int fib2=1;
+*/
 int main()
 {
     unsigned long long int resul;
@@ -26,4 +30,19 @@ int main()
     cin>>fib;
     resul = fibo(fib);
     return 0;
+    
+    
+   /* while(fib2 > 0){
+        fib2=fib2+fib1;
+        fib1=fib2-fib1;
+        n += 1;
+    }
+    cout << "Overflow para n = " << n-1 << endl;
+    */
 }
+/*
+Overflow:
+- Int = 47
+- Long = 93
+*/
+
